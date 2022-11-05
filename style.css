@@ -1,0 +1,290 @@
+@font-face {
+    font-family: "Poppins";
+    src: url(../media/fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: "Poppins-Light";
+    src: url(../media/fonts/Poppins/Poppins-Light.ttf);
+}
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url(../media/fonts/Poppins/Poppins-SemiBold.ttf);
+}
+:root{
+    --padding-continer: 50px 0;
+    --color-title: #00747c; 
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+/*  header  */
+
+.continer{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-continer);
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color: #FFFFFF;
+}
+.hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100% ), url(../media/img/bg-index.jpg);
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+    z-index: -1;
+}
+
+/*  nav  */
+
+.nav{
+    --padding-continer: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav_title{
+    font-family: "Poppins-Bold", sans-serif;
+}
+
+.nav_link{
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+}
+
+.nav_item{
+    list-style: none;
+}
+
+.nav_menu{
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.nav_links{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.nav_close{
+    display: var(--show, none);
+}
+
+.nav_img{
+    display: block;
+    width: 30px;
+}
+
+/*  hero  */
+
+.hero_continer{
+    max-width: 800px;
+    display: grid;
+    --padding-continer: 0;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: 1em;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.hero_title{
+    font-size: 3rem;
+}
+
+.hero_paragraph{
+    margin-bottom: 20px;
+}
+
+.cta{
+    display: inline-block;
+    background-color: var(--color-title);
+    justify-self: center;
+    text-decoration: none;
+    color: #FFF;
+    border-radius: 35px;
+    padding: 10px 35px;
+    font-family: "Poppins-Bold", sans-serif;
+    transition: .3s;
+}
+
+.cta:hover{
+    background-color: #FFFFFFCC;
+    color: #000;
+}
+
+/*   about   */
+
+.about{
+    text-align: center;
+}
+
+.subtitle{
+    color: var(--color-title);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.about_paragraph{
+    line-height: 1.7;
+}
+
+.about_main{
+    padding-top: 50px;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+}
+
+.about_cards{
+    display: grid;
+    gap: 1em;
+    justify-items: center;
+    width: 260px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.card_icon{
+     width: 40px;
+}
+
+/*   edge  */
+
+.edge{
+    background-color: #e5e5f7;
+    background: linear-gradient(135deg, #43434355 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(225deg, #43434333 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(315deg, #43434333 25%, transparent 25%) 0px 0/ 20px 20px, linear-gradient(45deg, #43434377 25%, #e5e5f7 25%) 0px 0/ 20px 20px;
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px ;
+}
+
+.edge_continer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+    color: #000;
+}
+
+.edge_paragraph{
+    line-height: 1.7;
+}
+
+.edge_media{
+    max-width: 500px;
+    margin: 0;
+}
+
+.edge_img{
+    width: 100%;
+    display: block;
+    border-radius: 35px;
+}
+
+/*   price   */
+
+.prices{
+    text-align: center;
+}
+
+.prices_table{
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.price_card{
+    background-color: #ebe7d4;
+    text-align: center;
+    padding: 40px;
+    border-radius: 15px;
+    width: 230px;
+    --color-plan: #696871;
+    --color-price: #1D293F;
+    --bg-cta: #fff;
+    --color-cta: #5454d4;
+    --color-items: #696871;
+    transition: .3s;
+}
+
+.price_card:hover{
+    
+    padding: 60px;
+}
+.price_best{
+    background-color: #ff7143;
+    --color-plan: #FFFFFFCC;
+    --color-price: #fff;
+    --bg-cta: #fff;
+    --color-cta: #5454d4;
+    --color-items: #fff;
+}
+
+.price_title{
+    color: var(--color-plan);
+    margin-bottom: 15px;
+    font-family: "Poppins-Bold", sans-serif;
+    font-size: 1.3rem;
+}
+
+.price{
+    color: var(--color-price);
+    font-size: 2.7rem;
+    font-family: "Poppins-Bold", sans-serif;
+}
+
+.price_items{
+    margin-top: 35px;
+    display: grid;
+    gap: 1em;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color: var(--color-items);
+    font-family: "Poppins-Light", sans-serif;
+}
+.price_item{
+    margin: 0;
+}
+
+.price_cta{
+    background-color: var(--color-title);
+    color: #FFF;
+    text-decoration: none;
+    display: block;
+    padding: 20px 0;
+    border-radius: 10px;
+    font-family: "Poppins-Bold", sans-serif;
+    transition: .3s;
+}
+
+.price_cta:hover{
+    background-color: #fff;
+    color: #000
+}
